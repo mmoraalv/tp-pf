@@ -1,10 +1,10 @@
 import { Router } from 'express';
 import messagesController from '../controllers/messages.controller.js';
 
-const routerMessage = Router();
+const messageRouter = Router();
 
-routerMessage.get('/', messagesController.getMessages);
+messageRouter.get('/', messagesController.getMessages);
 
-routerMessage.post('/', messagesController.postMessage);
+messageRouter.post('/', messagesController.postMessage);
 
-export default routerMessage;
+export default messageRouter;
