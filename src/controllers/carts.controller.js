@@ -38,7 +38,7 @@ const purchaseCart = async (req, res) => {
 			let amount = 0;
 			const purchaseItems = [];
 			cart.products.forEach(async item => {
-				const product = products.find(prod => prod._id == item.id_prod.toString());
+				const product = products.find(prod => prod._id == item.id_prod._id.toString());
 				if (product.stock >= item.quantity) {
 					amount += product.price * item.quantity;
 					product.stock -= item.quantity;
